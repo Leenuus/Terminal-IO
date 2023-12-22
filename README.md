@@ -25,13 +25,13 @@ In the second case mentioned in the above program, `pseudo terminal` comes to he
 
 ## Pseudo Terminal
 
-This is a general term, refering to applications making use of the pseudo terminal interface provided by the kernel. These apps always read and write multiple io stream.
+This is a general term, referring to applications making use of the pseudo terminal interface provided by the kernel. These apps always read and write multiple io stream.
 
 For example, telnetd read from the network stream, pipe it to the shell it spawns, and then read back the output from the shell, finally write to the network stream again. 
 
 Pseudo terminal is consist of slave side and master side, which do not refer to a specific process. It is just a interface to the process the app run. The app can read and write to it, like a real terminal.
 
-Pseudo terminal can be nested!!! So when you try using `stty` to change the behavior of your terminal behaviors, a lot of things may affect the result. For example, `stty -echo` __can not__ disable echoing when you are using `fish` shell, but it is OK when you are using `bash`. Looking up the hierachy of program can help you find out which program gives you that pseudo terminal interface. `fish` automatically enable echoing when it starts. But when you spawn `bash` within fish, you are able to map `inrt` to `.`, and returning to `fish`. `fish` shares the same `pts` with `bash` it spawned, so pressing `.` can invoke `intr` in fish now.
+Pseudo terminal can be nested!!! So when you try using `stty` to change the behavior of your terminal behaviors, a lot of things may affect the result. For example, `stty -echo` __can not__ disable echoing when you are using `fish` shell, but it is OK when you are using `bash`. Looking up the hierarchy of program can help you find out which program gives you that pseudo terminal interface. `fish` automatically enable echoing when it starts. But when you spawn `bash` within fish, you are able to map `inrt` to `.`, and returning to `fish`. `fish` shares the same `pts` with `bash` it spawned, so pressing `.` can invoke `intr` in fish now.
 
 ## Inspecting
 
@@ -49,7 +49,7 @@ Pseudo terminal can be nested!!! So when you try using `stty` to change the beha
 
 ### Terminal Emulator
 
-TODO: The architecture illustration in _Advanced Programming in Unix Enviornment here_
+TODO: The architecture illustration in _Advanced Programming in Unix Environment here_
 
 
 ### TODO
