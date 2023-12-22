@@ -56,3 +56,14 @@ TODO: The architecture illustration in _Advanced Programming in Unix Enviornment
 
 1. Controlling Terminal
 2. Group ID, User ID, real user ID
+
+
+## References
+
+0. Please refer to man page.
+    - For utility: `tty`, `stty`
+    - For interface: `pts`, `posix_openpt`, `grantpt`, `unlockpt`, `ptsname`
+    - For applications: `xterm`, `sshd`
+1. [Linux System Programming Techniques, Jack-Benny Persson](https://www.amazon.com/Linux-System-Programming-Techniques-proficient/dp/1789951283)
+2. [Advanced Unix Programming, Marc Rochkind](https://www.amazon.com/Advanced-UNIX-Programming-Marc-Rochkind/dp/0131411543)
+3. [Advanced Programming in the UNIX Environment, 3rd Edition 3rd Edition, W. Stevens, Stephen Rago](https://www.amazon.com/Advanced-Programming-UNIX-Environment-3rd/dp/0321637739)
