@@ -27,7 +27,7 @@ In the second case mentioned in the above program, `pseudo terminal` comes to he
 
 This is a general term, referring to applications making use of the pseudo terminal interface provided by the kernel. These apps always read and write multiple io stream.
 
-For example, telnetd read from the network stream, pipe it to the shell it spawns, and then read back the output from the shell, finally write to the network stream again. 
+For example, telnetd read from the network stream, pipe it to the shell it spawns, and then read back the output from the shell, finally write to the network stream again.
 
 Pseudo terminal is consist of slave side and master side, which do not refer to a specific process. It is just a interface to the process the app run. The app can read and write to it, like a real terminal.
 
@@ -38,8 +38,7 @@ Pseudo terminal can be nested!!! So when you try using `stty` to change the beha
 1. `who`, find out current log-in users and the terminal(including pseudo terminal) devices they are using respectively
 2. `w`, telling you information about the users currently on the machine, and their processes. You can easily inspect which terminal device corresponds to which program. For example, `tty/2` may attach to `sddm`, if you are using KDE
 
-
-### Applications List:
+### Applications List
 
 1. script
 2. expect
@@ -51,19 +50,17 @@ Pseudo terminal can be nested!!! So when you try using `stty` to change the beha
 
 TODO: The architecture illustration in _Advanced Programming in Unix Environment here_
 
-
 ### TODO
 
 1. Controlling Terminal
 2. Group ID, User ID, real user ID
 
-
 ## References
 
 0. Please refer to man page.
     - For utility: `tty`, `stty`
-    - For interface: `pts`, `posix_openpt`, `grantpt`, `unlockpt`, `ptsname`
-    - For applications: `xterm`, `sshd`
+    - For interface: `pts`, `posix_openpt`, `grantpt`, `unlockpt`, `ptsname`, `ioctl_tty`, `2 ioctl`
+    - For applications: `xterm`, `sshd`, `screen`
 1. [Linux System Programming Techniques, Jack-Benny Persson](https://www.amazon.com/Linux-System-Programming-Techniques-proficient/dp/1789951283)
 2. [Advanced Unix Programming, Marc Rochkind](https://www.amazon.com/Advanced-UNIX-Programming-Marc-Rochkind/dp/0131411543)
 3. [Advanced Programming in the UNIX Environment, 3rd Edition 3rd Edition, W. Stevens, Stephen Rago](https://www.amazon.com/Advanced-Programming-UNIX-Environment-3rd/dp/0321637739)

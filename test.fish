@@ -16,3 +16,8 @@ report "./target//main > ./target//test-output-file" "redirect to regular file"
 report "./target//main > /dev/pts/4" "redirect to pseudo terminal /dev/pts/4"
 
 report "./target//pseudo-terminal" "creating pseudo terminal\nuse `screen <device pts>` to connect to the slave and test it"
+
+report "./target/turn-off-echoing" "Echoing is turn off:"
+
+
+report "./target/window-size" "usage: ./target/window-size <col> <row>\nThe window size get restored after being interrupted with C-c"
